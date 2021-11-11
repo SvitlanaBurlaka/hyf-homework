@@ -1,0 +1,96 @@
+body{
+font-family: serif, Arial, Helvetica, sans-serif;
+}
+
+.my-photo {
+position:absolute;
+left: 350px;;
+top: 10px;
+margin:1%;
+border: 1px solid lightseagreen;
+border-radius:2px;
+align-content: center;
+}
+
+.personal-information {
+position: relative;
+left: 600px;
+top: 5px;
+font-size:20px;
+margin:5%;
+padding:1%;
+letter-spacing: 0.1em;
+font-style: oblique;
+align-content: center;
+}
+
+header {
+border-radius: 10px;
+border-top:6px solid lightblue;
+border-bottom:6px solid lightblue;
+background-color:lightgrey;
+margin:1%;
+}
+
+.profile  {   
+font-size:20px;
+line-height: 1.6;
+border-radius: 10px;
+border-bottom:3px solid lightblue;
+background-color:lightgrey ;
+margin:1%;
+padding:3%;
+}
+
+.work-experince, .learning-strategies {
+font-size:20px;
+line-height: 1.6;
+border-radius: 10px;
+border-bottom:3px solid lightblue;
+background-color:lightgrey ;
+margin:1%;
+padding:1%;
+}
+
+.resources{
+border-radius: 10px;
+font-size:20px;
+line-height: 1.6;
+border-bottom:3px solid lightblue;
+text-decoration: none;
+background-color:lightgrey ;
+margin:1%;
+padding:1%;
+}
+
+.education{
+border-radius: 10px;
+font-size:20px;
+line-height: 1.6;
+border-bottom:6px solid lightblue;
+background-color:lightgrey; 
+margin:1%; 
+padding:1%;  
+}
+
+a {
+color:darkblue;
+text-decoration:none;
+}
+a:hover {
+text-decoration: underline;
+}
+
+.profile-header, .work-expirience-header, .education-header, .learning-strategies-heder, .recources-header{
+font-size:25px;
+font-weight: bold;
+text-shadow: 2px 2px 2px  darkgrey;
+margin:1%;
+padding:1%;
+}
+
+.date{
+ color:darkblue; 
+ padding:1%;  
+}
+
