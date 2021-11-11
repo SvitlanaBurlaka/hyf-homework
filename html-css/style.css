@@ -1,0 +1,92 @@
+body{
+font-family: serif, Arial, Helvetica, sans-serif;
+}
+
+.info{
+width:70%;
+margin:3%;
+font-size:20px;
+letter-spacing: 0.1em;
+font-style: oblique;
+}
+
+.my-photo {
+width:170px;
+border: 1px solid lightseagreen;
+border-radius:2px;
+margin:3%;
+}
+
+header {
+justify-content: space-between;
+display:flex;
+border-radius: 10px;
+border-top:6px solid lightblue;
+border-bottom:6px solid lightblue;
+background-color:lightgrey;
+margin:1%;
+padding:-1%
+}
+
+.profile  {   
+font-size:20px;
+line-height: 1.6;
+border-radius: 10px;
+border-bottom:3px solid lightblue;
+background-color:lightgrey ;
+margin:1%;
+padding:3%;
+}
+
+.work-experince, .learning-strategies {
+font-size:20px;
+line-height: 1.6;
+border-radius: 10px;
+border-bottom:3px solid lightblue;
+background-color:lightgrey ;
+margin:1%;
+padding:1%;
+}
+
+.resources{
+border-radius: 10px;
+font-size:20px;
+line-height: 1.6;
+border-bottom:3px solid lightblue;
+text-decoration: none;
+background-color:lightgrey ;
+margin:1%;
+padding:1%;
+}
+
+.education{
+border-radius: 10px;
+font-size:20px;
+line-height: 1.6;
+border-bottom:6px solid lightblue;
+background-color:lightgrey; 
+margin:1%; 
+padding:1%;  
+}
+
+a {
+color:darkblue;
+text-decoration:none;
+}
+a:hover {
+text-decoration: underline;
+}
+
+.profile-h, .work-expirience-h, .education-h, .learning-strategies-h, .recources-h{
+font-size:25px;
+font-weight: bold;
+text-shadow: 2px 2px 2px  darkgrey;
+margin:1%;
+padding:1%;
+}
+
+.date{
+ color:darkblue; 
+ padding:1%;  
+}
+
