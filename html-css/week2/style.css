@@ -1,0 +1,236 @@
+* {
+margin: 0;
+padding: 0;
+}
+ 
+body{
+font-family: 'Open Sans', sans-serif;
+} 
+
+a{
+text-decoration: none;
+}
+
+li{
+text-decoration: none;
+}
+
+header{
+width: 100%;
+background-color:lightgrey;
+font-size:26px;
+padding: 56px 0;
+}
+
+.container{
+max-width: 1150px;
+margin: auto;
+}
+
+ 
+.title-main h1{
+text-transform:uppercase;
+font-size: 26px;
+font-weight:bold;
+}
+
+.title-main p{
+color:lightslategray;
+font-weight:bold;
+font-size:20px;
+}
+
+
+nav{
+padding:25px;
+}
+
+.header-navigation a{
+color: lightslategray;
+text-align: left;
+font-size: 14px;
+font-weight:bold;
+justify-content: space-between;
+padding-right:40px;
+}
+
+
+.picture img{
+max-width:100%;
+}
+
+.first-block{
+margin:0 auto;
+display:flex;
+padding: 55px 0 55px 0;
+}
+
+.about-left p{
+margin:32px 100px 30px 0;
+font-size: 12px;
+}
+
+.about-right h2{
+font-weight: bold;
+}
+
+.about-right p{
+margin:23px 0 30px 0 ;
+font-size: 12px;
+}
+
+.second-block{
+display:flex;
+margin:0 auto;
+padding: 55px 0 55px 0;
+align-items: baseline;
+}
+
+.gallery-left p{
+margin-top:30px;
+font-size: 12px;
+width: 75%;
+}
+
+.logotypes{
+width: 60%;
+margin: auto;
+}
+
+.logo  {
+margin-top:15px;
+}
+
+
+.logo-image {
+width:15%;
+margin:18px;
+}
+
+footer {
+background-color:blueviolet;
+color:white;
+margin-top:100px;
+padding: 40px 20px 40px 20px;
+line-height: 1.2em;
+}
+
+iframe{
+width: 230px;
+height: 230px;   
+}
+
+footer .container{
+display:flex;
+justify-content:space-around;
+align-items: baseline;
+}
+
+li {
+list-style-type:none;
+}
+
+h4{
+padding-bottom:27px;
+}
+
+.bold-text-about{
+line-height: 2em;
+}
+
+.bold-text{
+font-size: 16px;
+font-weight:bold;
+line-height: 3em; 
+  
+}
+
+.link-footer{
+color:white;
+}
+
+@media screen and (max-width:480px ){
+     
+.container{
+max-width: 100%;
+font-size:13px;
+padding: 10px 10px;
+}
+
+.header-navigation a{
+display:block;
+}
+
+.first-block{
+display:block;
+padding:10px 10px;
+}
+
+.second-block{
+display:block;
+padding:10px 10px;
+}
+
+.logotypes{
+padding:10px 10px;
+margin-top:20px;
+max-width: 100%;
+width: unset;
+}
+
+.logo{
+display:block;
+flex-direction: row;   
+flex-wrap: wrap;
+}
+
+footer{
+margin-top:5px;
+
+}
+
+footer .container{
+display:block;
+flex-direction: column;
+}
+
+footer iframe{
+width:100%;
+}
+
+h4 {
+padding: 17px 0 3px 0;
+font-size: 15px;
+ 
+}
+.bold-text li{
+    font-size: 13px;
+}
+}
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
