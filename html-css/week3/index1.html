@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <img class="logotype" src="images/logotype (2).jpg" alt="logotype of the shop">
+        <div class="navigation">
+            <nav> Navigation </nav>
+        </div>
+    </header>
+    <main>
+        <h1 class="text-info">Sign up to yourcustomtailor.com </h1>
+        <p class="text-info">We can't wait to help you improve your life-style and gain the attention from people around you! </p>
+        <p class="text-info">Sign up below to save up to 70% on apparel, hand-bags and cosmetics. Our agents are busy picking the best offers that match your preferences and style. Every week we will send you a hand-picked selection - we just need to know a few details about
+            your first...</p>
+
+        <div class="progress">
+            <h2 class="text-info">Step 1/4 - tell us who you are?</h2>
+            <p>Progress</p>
+            <progress class="progress-line" value="25" max="100"></progress>
+        </div>
+
+        <p class="text-info">
+            Nice to meet you. Let's spend a minute to get to know each other? Please enter the following:
+        </p>
+        <form action="https://bit.ly/3D6owpX" method="post">
+            <div class="container">
+                <label for="first-name">First name*</label>
+                <input type="text" id="first-name" name="first-name">
+                <label for="last-name">Last name* </label>
+                <input type="text" id="last-name" name="last_name">
+            </div>
+            <div class="container">
+                <label>Country*</label>
+                <select class="country" required="required">
+                <option value=""> </option>
+                <option value="denmark">Denmark</option>
+                <option value="germany">Germany </option>
+                <option value="sweden">Sweden</option>
+                <option value="norway">Norway</option>
+                <option value="iceland">Iceland</option>
+                <option value="greenland">Greenland </option>
+                <option value="poland">Poland </option>
+                </select>
+
+            </div>
+            <div class="container">
+                <label for="street-address">Street address*</label>
+                <input type="text" id="street-address" name="street-address">
+                <label for="post-code">Post code* </label>
+                <input type="text" id="post-code" name="post-code" maxlength="4" pattern="[0-9]*">
+            </div>
+            <div class="container">
+                <label for="msg">Profile description <p class="text-description"> Please provide a short description of yourselv to
+                    be displayed on our social community pages. </p> </label>
+                <textarea id="msg" name="msg" maxlength="500"></textarea>
+            </div>
+            <p class="text-info">Use the same adress for billing and shipping? Uncheck below to fill out a separate shipping address.</p>
+            <div class="container">
+                <p>
+                    <label for="shipping">Shipping address</label>
+                    <input class="sign-up" type="checkbox" id="shipping" name="shipping" checked>
+                </p>
+
+            </div>
+            <button type="submit"> Next step </button>
+        </form>
+    </main>
+</body>
+
+</html>

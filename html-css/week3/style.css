@@ -1,0 +1,153 @@
+                * {
+                    margin: 0;
+                    padding: 0;
+                }
+                
+                body {
+                    font-family: 'Open Sans', sans-serif;
+                    background-color: hsl(0, 14%, 84%);
+                    margin: 20px;
+                }
+                
+                header {
+                    display: flex;
+                    justify-content: space-between;
+                    margin: 20px;
+                }
+                
+                .logotype {
+                    width: 150px;
+                    border: white solid 5px;
+                }
+                
+                .navigation {
+                    border: solid rgb(252 243 236);
+                    border-width: 2px;
+                    width: 150px;
+                    border: white solid 5px;
+                }
+                
+                form {
+                    max-width: 800px;
+                    margin: 60px;
+                }
+                
+                .name {
+                    display: flex;
+                    justify-content: center;
+                    justify-content: baseline;
+                }
+                
+                .text-info {
+                    margin: 30px 30px;
+                }
+                
+                .progress-line {
+                    width: 90%;
+                    height: 40px;
+                }
+                
+                label {
+                    font-weight: bold;
+                    width: 140px;
+                    margin: 20px 5px;
+                    display: inline-block;
+                    font-weight: bold;
+                }
+                
+                input,
+                select {
+                    width: 200px;
+                    height: 40px;
+                }
+                
+                input[type="radio"] {
+                    width: 15px;
+                }
+                
+                textarea {
+                    width: 100%;
+                    height: 140px;
+                }
+                
+                .text-description {
+                    font-style: italic;
+                    font-size: 12px;
+                }
+                
+                .sign-up {
+                    width: 65px;
+                    height: 28px;
+                    font-size: 12px;
+                }
+                
+                .container {
+                    display: flex;
+                    align-items: baseline;
+                }
+                
+                button {
+                    float: right;
+                    width: 200px;
+                    height: 40px;
+                    margin: 10px 10px;
+                    background-color: rgb(195, 213, 214);
+                }
+                
+                .text-info-sign-up {
+                    margin: 30px 30px 10px;
+                }
+                
+                .clothes {
+                    width: 70px;
+                    display: block;
+                }
+                
+                .checkbox-image {
+                    height: 15px;
+                    width: 15px;
+                }
+                
+                .container-clothes {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr 1fr 1fr;
+                    grid-gap: 25px;
+                }
+                
+                progress {
+                    -webkit-appearance: none;
+                    border: none;
+                    background-size: auto;
+                }
+                
+                progress::-webkit-progress-bar {
+                    background: rgb(143, 177, 180);
+                }
+                
+                progress::-webkit-progress-value {
+                    background: rgb(204, 176, 200);
+                }
+                
+                @media screen and (max-width:480px) {
+                    .container {
+                        display: block;
+                    }
+                    label {
+                        margin: 20px 80px;
+                    }
+                    textarea {
+                        max-width: 200px;
+                    }
+                }
+                
+                @media screen and (max-width:860px) {
+                    .container {
+                        display: block;
+                    }
+                    label {
+                        margin: 20px 80px;
+                    }
+                    textarea {
+                        max-width: 500px;
+                    }
+                }

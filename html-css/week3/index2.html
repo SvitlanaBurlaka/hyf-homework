@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <img class="logotype" src="images/logotype (2).jpg" alt="logotype of the shop">
+        <div class="navigation">
+            <nav> Navigation </nav>
+        </div>
+    </header>
+    <main>
+        <h1 class="text-info">Sign up to yourcustomtailor.com </h1>
+
+        <div class="progress">
+            <h2 class="text-info">Step 2/4 - how can we reach you?</h2>
+            <p>Progress</p>
+            <progress class="progress-line" value="50" max="100"></progress>
+        </div>
+        <p class="text-info"> We will probably need to stay in touch somehow. Let us know how we cam reach you? </p>
+        <form action="https://bit.ly/2ZnXkF6" method="post">
+            <div class="container">
+                <label for="email">Email* </label>
+                <input type="email" id="email" name="email" pattern="^([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22))*\x40([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d))*$"
+                    required>
+                <label for="phone">Phone</label>
+                <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+            </div>
+            <div class="container">
+                <label for="pass1">Password*</label>
+                <input type="password" id="pass1" name="password" minlength="10" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$" title="Please include at least 1 uppercase character, 1 lowercase character." required>
+            </div>
+            <div class="container">
+                <label for="pass2">Re-enter password*</label>
+                <input type="password" id="pass2" name="password" minlength="10" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$" title="Please include at least 1 uppercase character, 1 lowercase character." required>
+            </div>
+
+            <p class="text-info-sign-up">I want to sign up for the newsletter</p>
+            <label class="sign-up" for="weekly"> Weekly news</label>
+            <input class="sign-up" type="radio" id="weekly" name="newsletter" value="weekly-news" checked>
+            <label class="sign-up" for="monthly">Monthly news</label>
+            <input class="sign-up" type="radio" id="monthly" name="newsletter" value="monthly-news">
+            <label class="sign-up" for="don`t-sent ">Don't sent me news</label>
+            <input class="sign-up" type="radio" id="don`t-sent " name="newsletter" value="don`t-sent ">
+
+            <p>
+                <button type="submit"> Next step </button>
+            </p>
+        </form>
+
+
+
+    </main>
+</body>
+
+</html>
