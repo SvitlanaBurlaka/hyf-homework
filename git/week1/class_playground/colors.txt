@@ -1,4 +1,4 @@
 pink yellow
-green25
+green26
 white
 darkgreen
