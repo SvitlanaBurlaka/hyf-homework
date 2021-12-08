@@ -1,0 +1,4 @@
+pink yellow
+green26
+white
+darkgreen
