@@ -1,14 +1,22 @@
 // Flight booking fullname function
-function getFullName(firstname, surname, useFormalName) {
+function getFullName(firstname, surname, useFormalName, gender) {
     if (useFormalName) {
-        return "Lord " + firstname + " " + surname;
-    } else {
-        return firstname + " " + surname;
+        switch (gender) {
+            case "male":
+                return "Lord " + firstname + " " + surname;
+                break;
+            case "female":
+                return "Lady " + firstname + " " + surname;
+                break;
+            default:
+                return firstname + " " + surname;
+        }
     }
+    return firstname + " " + surname;
 }
 
-const fullName1 = getFullName("Benjamin", "Hughes", true);
-const fullName2 = getFullName("Benjamin", "Hughes", false);
+const fullName1 = getFullName("Benjamin", "Hughes", true, "male");
+const fullName2 = getFullName("Frida", "Hughes", true, "female");
 console.log(fullName1);
 console.log(fullName2);
 
@@ -35,10 +43,12 @@ console.log(getEventWeekday(2));
 // Weather wear
 
 function showWhatToWear(temperature) {
-    if (temperature < -1) {
+    if (temperature < -5) {
+        return "winter jacket and jeans, scarf ";
+    } else if (temperature < 5) {
         return "winter jacket and jeans ";
     } else if (temperature > 10) {
-        return "jacket and jeans";
+        return "jacket, jeans and sneakers";
     } else {
         return "shorts and a t-shirt";
     }
@@ -58,7 +68,7 @@ function addStudentToClass(studentName) {
         class07Students.push(studentName);
     } else if (studentName == "") {
         console.log("Enter name");
-    } else if (class07Students.length == 6) {
+    } else if (class07Students.length <= 6) {
         console.log("Cannot add more students to class 07");
     } else {
         class07Students.push(studentName);
