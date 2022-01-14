@@ -109,18 +109,21 @@ saveNote("Make dinner", 3);
 console.log(notes); // [{content: 'Pick up groceries', id: 1}, {content: 'Do laundry', id: 2}]
 
 // Get a note
+let neddedId = -1;
 
 function getNote(id) {
     for (i = 0; i < notes.length; i++) {
-        if (notes.i === id) {
+        if (notes[i].id === id) {
+            neddedId = notes[i].id;
             return notes[i];
-        } else {
-            console.log("You dont have this note");
         }
+    }
+    if (neddedId === -1) {
+        console.log("You dont have this note");
     }
 }
 
-const firstNote = getNote();
+const firstNote = getNote(1);
 console.log(firstNote); // {content: 'Pick up groceries', id: 1}
 
 // Log out notes
