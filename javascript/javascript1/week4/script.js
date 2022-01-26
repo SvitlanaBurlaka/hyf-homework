@@ -1,8 +1,8 @@
 // Voice assistant
 
-let names = [];
+const names = [];
 
-let toDoList = [];
+const toDoList = [];
 
 let nameOfSpeaker = "";
 let activitiesToDo = "";
@@ -25,7 +25,7 @@ const months = {
 let operation;
 let result = "";
 
-let booksToRead = {
+const booksToRead = {
     0: "The Great Gatsby by F. Scott Fitzgerald",
     1: "Don Quixote by Miguel de Cervantes",
     2: "Alice's Adventures in Wonderland by Lewis Carroll",
@@ -104,16 +104,19 @@ function getReply(command) {
 
         switch (operation) {
             case "+":
-                console.log((result = num1 + num2));
+                console.log(num1 + num2);
                 break;
             case "-":
-                console.log((result = num1 - num2));
+                console.log(num1 - num2);
+
                 break;
             case "*":
-                console.log((result = num1 * num2));
+                console.log(num1 * num2);
+
                 break;
             case "/":
-                console.log((result = num1 / num2));
+                console.log(num1 / num2);
+
                 break;
         }
     }
@@ -141,6 +144,6 @@ getReply("Remove fishing from my todo");
 getReply("What is on my todo?");
 getReply("Remove cooking from my todo");
 getReply("What day is it today?");
-getReply("What is 3 + 5?");
+getReply("What is 4 * 2 ?");
 getReply("Set a timer for 1 minutes");
 getReply("What are 5 books everyone should read?");
