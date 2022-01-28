@@ -26,7 +26,7 @@ function countLetters(str) {
         if (uniqueLetter.includes(str[i])) {
             result.total = result.total + 1;
             if (result.hasOwnProperty(str[i])) {
-                result[str[i]] = result[str[i]] + 1;
+                result[str[i]] += 1;
             } else {
                 result[str[i]] = 1;
             }
