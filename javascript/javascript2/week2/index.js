@@ -15,24 +15,24 @@ const numbers = [1, 2, 3, 4];
 const doubledOddNumbers = numbers
     .filter((item) => item % 2 !== 0)
     .map((item) => item * 2);
-console.log(doubledOddNumbers);
+console.log("The doubled numbers are " + doubledOddNumbers);
 
 // Working with movies
 
-// Movies with a short title
+//1. Movies with a short title
 
 const moviesWithAShortTitle = movies.filter((item) => item.title.length < 3);
 console.log(moviesWithAShortTitle);
 
-// An array of movie titles with long movie titles
+// 2. An array of movie titles with long movie titles
 
-const moviesLongTitles = movies
+const moviesWithALongTitles = movies
     .filter((item) => item.title.length > 60)
     .map((item) => item.title);
 
-console.log(moviesLongTitles);
+console.log(moviesWithALongTitles);
 
-// Count the number of movies made between 1980-1989 (including both the years)
+// 3. Count the number of movies made between 1980-1989 (including both the years)
 
 const moviesFromEighties = movies.filter(
     (movie) => movie.year <= 1989 && movie.year >= 1980
@@ -40,10 +40,10 @@ const moviesFromEighties = movies.filter(
 
 console.log(moviesFromEighties);
 
-// Create a new array that has an extra key called tag.
+// 4. Create a new array that has an extra key called tag.
 //  The tag is based on the rating: Good (>= 7), Average (>= 4 and < 7), Bad (< 4)
 
-const moviesRating = movies.map((item) => {
+const newTag = movies.map((item) => {
     if (item.rating >= 7) {
         item.tag = "Good";
         return item;
@@ -55,17 +55,17 @@ const moviesRating = movies.map((item) => {
         return item;
     }
 });
-console.log(moviesRating);
+console.log(newTag);
 
-// Using chaining, first filter the movies array to only contain the movies rated higher than 6.
+// 5. Using chaining, first filter the movies array to only contain the movies rated higher than 6.
 // Now map the movies array to only the rating of the movies.
 
-const goodRating = movies
+const moviesWithHighRating = movies
     .filter((movie) => movie.rating > 6)
     .map((movie) => movie.rating);
-console.log(goodRating);
+console.log(moviesWithHighRating);
 
-// Count the total number of movies containing any of following keywords: Surfer, Alien or Benjamin.
+// 6. Count the total number of movies containing any of following keywords: Surfer, Alien or Benjamin.
 // So if there were 3 movies that contained Surfer, 1 with Alien and 2 with Benjamin, you would return 6.
 //  Can you make sure the search is case insensitive?
 
@@ -83,27 +83,14 @@ const counterMovies = movies.reduce((result, item) => {
 
 console.log(counterMovies);
 
-// Calculate the average rating of all the movies using reduce.Optional
-
-const averageRatingLength = movies.map((movie) => movie.rating).length;
-
-const averageRating =
-    movies
-    .map((movie) => movie.rating)
-    .reduce((result, rating) => {
-        return result + rating;
-    }, 0) / averageRatingLength;
-
-console.log(averageRating);
-
-// Create an array of movies where a word in the title is duplicated.Fx "Star Wars: The Clone Wars"
+// 7. Create an array of movies where a word in the title is duplicated.Fx "Star Wars: The Clone Wars"
 // the word Wars is duplicated.
 
-const dublicateWords = movies.filter((movie) => {
+const findDublicateWords = movies.filter((movie) => {
     const alreadySeen = [];
-    const words = movie.title.toLowerCase().split(" ");
+    const wordsInTitle = movie.title.toLowerCase().split(" ");
     let result = false;
-    words.forEach((word) => {
+    wordsInTitle.forEach((word) => {
         if (alreadySeen.includes(word)) {
             result = true;
         } else {
@@ -113,19 +100,33 @@ const dublicateWords = movies.filter((movie) => {
     return result;
 });
 
-console.log(dublicateWords);
-// Count the total number of Good, Average and Bad movies using reduce.
+console.log(findDublicateWords);
+
+// 8. Calculate the average rating of all the movies using reduce.Optional
+
+const averageRatingsLength = movies.map((movie) => movie.rating).length;
+
+const averageRating =
+    movies
+    .map((movie) => movie.rating)
+    .reduce((result, rating) => {
+        return result + rating;
+    }, 0) / averageRatingsLength;
+
+console.log(averageRating);
+
+// 9. Count the total number of Good, Average and Bad movies using reduce.
 // A return could fx be {goodMovies: 33, averageMovies: 45, goodMovies: 123} Optional
-const newRating = movies.reduce(
-    (objectWitRating, movie) => {
+const countTotalNumberOfRating = movies.reduce(
+    (objectWitRatings, movie) => {
         if (movie.rating >= 7) {
-            objectWitRating.goodMovies += 1;
+            objectWitRatings.goodMovies += 1;
         } else if (movie.rating >= 4 && movie.rating < 7) {
-            objectWitRating.averageMovies += 1;
+            objectWitRatings.averageMovies += 1;
         } else {
-            objectWitRating.badMovies += 1;
+            objectWitRatings.badMovies += 1;
         }
-        return objectWitRating;
+        return objectWitRatings;
     }, {
         goodMovies: 0,
         averageMovies: 0,
@@ -133,4 +134,4 @@ const newRating = movies.reduce(
     }
 );
 
-console.log(newRating);
+console.log(countTotalNumberOfRating);
