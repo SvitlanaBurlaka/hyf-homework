@@ -6,6 +6,7 @@ console.log(products);
 let ul = document.querySelector(".listOfProducts");
 
 function renderProducts(ourProducts) {
+    ul.innerHTML = "";
     for (let i = 0; i < ourProducts.length; i++) {
         const product = ourProducts[i];
         const productTitle = document.createElement("h3");
@@ -26,3 +27,14 @@ function renderProducts(ourProducts) {
 renderProducts(products);
 
 // Filter products
+
+const filterInputNames = document.querySelector(".searchingProducts");
+
+filterInputNames.addEventListener("input", function(e) {
+    const valueInput = e.target.value;
+    const filteredProducts = products.filter((item) =>
+        item.name.toLowerCase().includes(valueInput.toLowerCase())
+    );
+    console.log(filteredProducts);
+    renderProducts(filteredProducts);
+});
