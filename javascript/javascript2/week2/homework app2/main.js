@@ -53,6 +53,7 @@ filterInputPrice.addEventListener("input", function(e) {
 });
 
 // Filter products based on rating
+
 const filterInputRating = document.querySelector(".filteringRating");
 filterInputRating.addEventListener("input", function(e) {
     const valueInputRating = e.target.value;
