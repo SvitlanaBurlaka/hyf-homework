@@ -47,7 +47,7 @@ const newTag = movies.map((item) => {
     if (item.rating >= 7) {
         item.tag = "Good";
         return item;
-    } else if (item.rating >= 4 && item.rating < 7) {
+    } else if (item.rating >= 4) {
         item.tag = "Average";
         return item;
     } else {
@@ -104,14 +104,12 @@ console.log(findDublicateWords);
 
 // 8. Calculate the average rating of all the movies using reduce.Optional
 
-const averageRatingsLength = movies.map((movie) => movie.rating).length;
-
 const averageRating =
     movies
     .map((movie) => movie.rating)
     .reduce((result, rating) => {
         return result + rating;
-    }, 0) / averageRatingsLength;
+    }, 0) / movies.length;
 
 console.log(averageRating);
 

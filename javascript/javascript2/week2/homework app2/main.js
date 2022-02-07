@@ -7,21 +7,17 @@ let ul = document.querySelector(".listOfProducts");
 
 function renderProducts(ourProducts) {
     ul.innerHTML = "";
-    for (let i = 0; i < ourProducts.length; i++) {
-        const product = ourProducts[i];
-        const productTitle = document.createElement("h3");
-        const productPrice = document.createElement("p");
-        const productRating = document.createElement("p");
-        productTitle.innerText = product.name;
-        productPrice.innerText = "Price :" + product.price;
-        productRating.innerText = "Rating :" + product.rating;
 
+    ourProducts.forEach((product) => {
         let list = document.createElement("li");
-        list.appendChild(productTitle);
-        list.appendChild(productPrice);
-        list.appendChild(productRating);
+        list.innerHTML = `
+        <h3>${product.name}</h3>
+        <p>Price :${product.price}</p>
+        <p>Rating :${product.rating} </p>
+         `;
+
         ul.appendChild(list);
-    }
+    });
 }
 
 renderProducts(products);
