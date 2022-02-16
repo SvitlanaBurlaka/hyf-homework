@@ -1,7 +1,6 @@
 // Getting value from input and adding an eventlistener
 const button = document.getElementById("startButton");
 let inputValue;
-
 let message = document.querySelector(".message"); // Creating a message string for different messages on page
 
 button.addEventListener("click", function func() {
@@ -9,9 +8,21 @@ button.addEventListener("click", function func() {
     if (inputValue === "") {
         message.innerText = "Oops! Remember to set a time!";
     } else {
-        setTimeout(() => {
-            findAWinner();
-        }, inputValue * 1000);
+        window.addEventListener("keydown", function countKeyDown(event) {
+            setTimeout(() => {
+                window.removeEventListener("keydown", countKeyDown);
+                findAWinner();
+            }, inputValue * 1000);
+
+            if (event.key === "s") {
+                countS += 1;
+                pTimesPressedS.innerText = countS;
+            }
+            if (event.key === "l") {
+                countL += 1;
+                pTimesPressedL.innerText = countL;
+            }
+        });
     }
 });
 
@@ -19,20 +30,8 @@ button.addEventListener("click", function func() {
 
 let countS = 0;
 let countL = 0;
-
 const pTimesPressedS = document.querySelector(".resultS");
 const pTimesPressedL = document.querySelector(".resultL");
-
-const keyPress = document.addEventListener("keydown", function(event) {
-    if (event.key === "s") {
-        countS += 1;
-        pTimesPressedS.innerText = countS;
-    }
-    if (event.key === "l") {
-        countL += 1;
-        pTimesPressedL.innerText = countL;
-    }
-});
 
 // Adding confetti
 
@@ -66,7 +65,6 @@ function findAWinner() {
     }
 }
 
-// Extra features
 // restarting game
 const restartButton = document.getElementById("restartButton");
 
@@ -77,4 +75,6 @@ restartButton.addEventListener("click", function() {
     countS = 0;
     confettiS.clear();
     confettiL.clear();
+    message.innerText = "";
+    document.getElementById("input").value = "";
 });
