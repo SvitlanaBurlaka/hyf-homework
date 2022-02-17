@@ -1,5 +1,10 @@
 // Find a cool api
-
+// Songkick API
+// To get a data from Songkick API we need specify two parameters in link : artist id and api key.
+// Then we can make a request to the API and get a JSON response.
+// Response will be an object which has an object and array "perfomance" with objects inside and "location" and "venue" objects.
+//  We can get all information, which we need, for example : type of event "Concert" or date, location and more.
+//
 // Weather app
 
 const button = document.querySelector(".submit");
