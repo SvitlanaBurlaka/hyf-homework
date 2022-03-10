@@ -1,13 +1,13 @@
 -- Find out how many tasks are in the task table
 SELECT
-    COUNT(id)
+    COUNT(id) as task_amount
 FROM 
     task;
 
 
 -- Find out how many tasks in the task table do not have a valid due date
 SELECT 
-    COUNT(id)
+    COUNT(id) as task_amount
 FROM
     task
 WHERE
@@ -80,7 +80,7 @@ ON
 
 -- Get the name of each status, along with a count of how many tasks have that status
 SELECT
-    status.name, COUNT(task.id)
+    status.name, COUNT(task.id) as task_amount
 FROM
     status
 JOIN
@@ -91,7 +91,7 @@ GROUP BY status.name;
 
 -- Get the names of all statuses, sorted by the status with most tasks first
 SELECT
-    status.name, COUNT(task.id)
+    status.name, COUNT(task.id) as task_amount
 FROM
     status
 JOIN
@@ -99,7 +99,7 @@ JOIN
 ON
     status.id = task.status_id
 GROUP BY status.name
-ORDER BY COUNT(task.id) DESC;
+ORDER BY task_amount DESC;
 
 
 
