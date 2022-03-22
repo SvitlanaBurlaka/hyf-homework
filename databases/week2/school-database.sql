@@ -21,7 +21,7 @@ CONSTRAINT `fk_class` FOREIGN KEY (`class_id`) REFERENCES `class` (`id`) ON DELE
 
 -- Create an index on the name column of the student table.
 CREATE INDEX indx_class_name
-ON class(name);
+ON student(name);
 
 -- Add a new column to the class table named status which can only have the following values: not-started, ongoing, finished (hint: enumerations).
 ALTER TABLE class
