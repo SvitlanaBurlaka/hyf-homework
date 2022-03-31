@@ -1,10 +1,25 @@
-[
+[{
+        "id": 1,
+        "title": "Indian food in the summer",
+        "maxNumberOfGuests": 5,
+        "description": "A nice night out eating delicious indian food",
+        "createdAt": "2019/12/7 14:34",
+        "price": 67
+    },
     {
-        "id" : 1,
-        "title" : "Indian food in the summer",
-        "maxNumberOfGuests" : 5,
-        "description" : "A nice night out eating delicious indian food",
-        "createdAt" : "2019/12/7 14:34",
-        "price" : 67
+        "id": 2,
+        "title": "Italian pasta salad",
+        "maxNumberOfGuests": 4,
+        "description": "A balanced, nutritious meal. Made with cooked pasta, non-starchy vegetables, and meat, cheese, or beans.",
+        "createdAt": "2019/14/7 12:34",
+        "price": 80
+    },
+    {
+        "id": 3,
+        "title": "Tuna salad with cranberries",
+        "maxNumberOfGuests": 7,
+        "description": "This salad has super simple ingredients and can be served on bread, crackers, or even lettuce cups",
+        "createdAt": "2019/15/7 12:30",
+        "price": 49
     }
 ]
