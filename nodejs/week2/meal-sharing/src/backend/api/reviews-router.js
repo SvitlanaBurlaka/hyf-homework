@@ -11,13 +11,7 @@ router.get("/:id", async(request, response) => {
     if (!Number.isInteger(idReview)) {
         return response.status(400).json(notANumberReviews);
     } else {
-        let neededReview = {};
-        reviews.find((element) => {
-            if (element.id === idReview) {
-                neddedReview = element;
-            }
-        });
-        return response.send(neededReview);
+        return response.send(reviews.find((element) => element.id === idReview));
     }
 });
 

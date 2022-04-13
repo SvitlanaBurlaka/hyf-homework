@@ -9,13 +9,9 @@ router.get("/:id", async(request, response) => {
     if (!Number.isInteger(idReservation)) {
         return response.status(400).json(notANumberReservation);
     } else {
-        let neededReservation = {};
-        reservations.find((element) => {
-            if (element.id === idReservation) {
-                neddedReservation = element;
-            }
-        });
-        return response.send(neededReservation);
+        return response.send(
+            reservations.find((element) => element.id === idReservation)
+        );
     }
 });
 
