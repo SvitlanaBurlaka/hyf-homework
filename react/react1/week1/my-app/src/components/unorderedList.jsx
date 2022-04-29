@@ -1,22 +1,20 @@
 import todoList from "../data/todoList";
-import ListItem from "./listItem";
+import ListItem from "./ListItem";
 
 
 export default function UnorderedList() {
-    return ( 
+    return (
         <article>
-        <ul> {
-            todoList.map((item) => {
-                    return ( < ListItem
+            <ul> {
+                todoList.map((item) => {
+                    return (< ListItem
                         key={item.id}
                         description={item.description}
                         deadlineDate={item.deadlineDate}
-                        />
-                        
-                        )
-                }
-            )
-        } </ul> 
+                    />
+                    )
+                })}
+            </ul>
         </article>
     )
 }
