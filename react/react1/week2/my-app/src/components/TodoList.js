@@ -1,68 +1,65 @@
 import { useState } from "react";
 import todoData from "../data/TodoData";
+import TodoItem from "./TodoItem";
 
 
 export default function TodoList() {
     const [todoState, setTodoState] = useState(todoData);
-
+    const [inputTodo, setInputTodo] = useState("");
     const AddNewTodo = () => {
         setTodoState((prevTodos) => {
             const newTodo = {
                 id: prevTodos[prevTodos.length - 1].id + 1,
-                description: "Random text",
+                description: inputTodo,
                 status: false,
             };
             return [...prevTodos, newTodo];
         });
     };
 
-    function TaskDescription(props) {
-        return (
-            <span>
-                {props.description}
-            </span>
-        )
-    };
-
-    const handleOnChange = (id) => {
-        const updatedCheckState = [...todoState]
+    const onTodoChecked = (id) => {
+        const updatedCheckState = [...todoState];
         updatedCheckState.map((item) => {
             if (id === item.id) {
                 item.status = !item.status;
             }
             return item;
-        })
-        setTodoState(updatedCheckState)
-    }
+        });
+        setTodoState(updatedCheckState);
+    };
 
     const deleteOnClick = (id) => {
-        const newTodos = todoState.filter((todo) => todo.id !== id)
-        setTodoState(newTodos)
+        const newTodos = todoState.filter((todo) => todo.id !== id);
+        setTodoState(newTodos);
+    };
+
+    const taskInputHandler = (e) => {
+        setInputTodo(e.target.value)
     }
-    return (
-        <>
-            <button onClick={AddNewTodo}> Add new Todo </button>
-            <ul> {todoState.length ? (
+
+
+
+    return (<>
+        <input type="text" value={inputTodo} onChange={taskInputHandler} />
+        <button onClick={AddNewTodo} > Add new Todo </button>
+        <ul> {
+            todoState.length ? (
                 todoState.map((todo) => {
                     return (
-                        <li className={todo.status ? "checked-item" : "item"}
-                            key={todo.id}>
-                            <TaskDescription
-                                description={todo.description}
-                            />
-                            <input
-                                type="checkbox"
-                                checked={todo.status}
-                                onChange={() => handleOnChange(todo.id)}
-                            />
-                            <button onClick={() => deleteOnClick(todo.id)} >
-                                Delete
-                            </button>
-                        </li>)
+                        <TodoItem
+                            todo={todo}
+                            key={todo.id}
+                            id={todo.id}
+                            description={todo.description}
+                            status={todo.status}
+                            onTodoChecked={onTodoChecked}
+                            deleteOnClick={deleteOnClick}
+                        />
+                    );
                 })
-            ) : (<p> No items</p>)
-            }
-            </ul>
-        </>
+            ) : (<p> No items </p>
+            )
+        } </ul>
+    </>
     );
-};
+}
