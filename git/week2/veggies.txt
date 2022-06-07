@@ -1,5 +1,7 @@
 Asparagus
 Carrot
-Potato
+Potatoes
 Squash
 Tomato
+Bean
+Broccoli
