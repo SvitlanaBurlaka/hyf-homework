@@ -1,9 +1,10 @@
-
 import { useContext } from "react";
-import { userContext } from "./UsersContext";
+import { UserContext } from "./DataContext";
 
-export const Header = () => {
-    const value = useContext(userContext);
+export function UserSearch() {
+
+    const value = useContext(UserContext);
+
     return (
         <>
             <h1>Github user searcher </h1>
@@ -11,5 +12,5 @@ export const Header = () => {
             {value.error && <p>Something went wrong</p>}
             {value.isLoading ? (<p>Loading...</p>) : ""}
         </>
-    )
+    );
 }

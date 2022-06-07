@@ -1,10 +1,14 @@
 import "./App.css";
-import { UserList } from "./components/UserList";
-
+import { ContextProvider } from "./Components/DataContext";
+import { UserSearch } from "./Components/UserSearch";
+import { RenderUser } from "./Components/RenderUser";
 function App() {
   return (
     <div className="App">
-      <UserList />
+      <ContextProvider>
+        <UserSearch />
+        <RenderUser />
+      </ContextProvider>
     </div>
   );
 }
